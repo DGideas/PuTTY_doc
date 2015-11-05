@@ -1,0 +1,89 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
+"http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="content-type" content="text/html; charset=US-ASCII">
+<title>PuTTY的简介</title>
+<link rel="previous" href="index.html">
+<link rel="ToC" href="index.html">
+<link rel="up" href="index.html">
+<link rel="index" href="IndexPage.html">
+<link rel="next" href="Chapter2.html">
+</head>
+<body>
+<p><a href="index.html">上页</a> | <a href="index.html">目录</a> | <a href="IndexPage.html">首页</a> | <a href="Chapter2.html">下页</a></p>
+
+<ul>
+<li><a href="#intro">第一章: PuTTY简介</a>
+<ul>
+<li><a href="#you-what">1.1 什么是SSH,Telnet和Rlogin?</a></li>
+<li><a href="#which-one">1.2 SSH,Telnet和Rlogin有什么不同?</a></li>
+</ul></li>
+</ul>
+<h1><a name="intro"></a><a name="C1"></a>Chapter 1: PuTTY的简介</h1>
+<p>
+PuTTY是一个在Win32系统下运行的免费SSH,Telnet和Rlogin客户端.
+</p>
+<h2><a name="you-what"></a><a name="S1.1"></a>1.1 什么是SSH,Telnet和Rlogin?</h2>
+<p>
+如果你已经了解SSH,Telnet和Rlogin是什么,你可以直接跳过本节去阅读下一章节.
+</p>
+<p>
+SSH,Telnet和Rlogin用于跨域登录另一台支持多用户的计算机。
+</p>
+<p>
+多用户系统——比如Unix和VMS,经常会提供<a name="i0"></a>给用户命令行界面,非常像 &#8216;<a name="i1"></a>命令提示符&#8217;或者&#8216;<a name="i2"></a>DOS系统&#8217; 在Windows下，系统会显示提示符，通过用户输入命令后计算机执行的方式运作。
+</p>
+<p>
+通过使用这种用户界面, there is no need for you to be sitting at the same machine you are typing commands to. The commands, and responses, can be sent over a network, so you can sit at one computer and give commands to another one, or even to more than one.
+</p>
+<p>
+SSH, Telnet和Rlogin都属于允许你完成上述操作的<a name="i3"></a><em>网络协议</em>. On the computer you sit at, you run a <a name="i4"></a><em>客户端</em>, which makes a network connection to the other computer (the <a name="i5"></a><em>服务器</em>). The network connection carries your keystrokes and commands from the client to the server, and carries the server's responses back to you.
+</p>
+<p>
+这些协议也可以被用作 other types of keyboard-based interactive session. In particular, there are a lot of bulletin boards, <a name="i6"></a>talker systems and <a name="i7"></a>MUDs (Multi-User Dungeons) which support access using Telnet. There are even a few that support SSH.
+</p>
+<p>
+You might want to use SSH, Telnet or Rlogin if:
+</p>
+<ul><li>
+you have an account on a Unix or VMS system which you want to be able to access from somewhere else
+</li>
+<li>
+your Internet Service Provider provides you with a login account on a <a name="i8"></a>web server. (This might also be known as a <a name="i9"></a><em>shell account</em>. A <em>shell</em> is the program that runs on the server and interprets your commands for you.)
+</li>
+<li>
+you want to use a <a name="i10"></a>bulletin board system, talker or MUD which can be accessed using Telnet.
+</li>
+</ul>
+<p>
+You probably do <em>not</em> want to use SSH, Telnet or Rlogin if:
+</p>
+<ul><li>
+you only use Windows. Windows computers have their own ways of networking between themselves, and unless you are doing something fairly unusual, you will not need to use any of these remote login protocols.
+</li>
+</ul>
+<h2><a name="which-one"></a><a name="S1.2"></a>1.2 SSH,Telnet和Rlogin有什么区别?</h2>
+<p>
+This list summarises some of the <a name="i11"></a>differences between SSH, Telnet and Rlogin.
+</p>
+<ul><li>
+SSH (是 &#8216;<a name="i12"></a>secure shell&#8217;的缩写) is a recently designed, high-security protocol. It uses strong cryptography to protect your connection against eavesdropping, hijacking and other attacks. Telnet and Rlogin are both older protocols offering minimal security.
+</li>
+<li>
+SSH and Rlogin both allow you to <a name="i13"></a>log in to the server without having to type a password. (Rlogin's method of doing this is insecure, and can allow an attacker to access your account on the server. SSH's method is much more secure, and typically breaking the security requires the attacker to have gained access to your actual client machine.)
+</li>
+<li>
+SSH允许你通过发送命令的方式自动连接到服务器。服务器可以执行你的命令并自动关闭连接。所以，你可以将它用在自动化处理上。
+</li>
+</ul>
+<p>
+The Internet is a hostile environment and security is everybody's responsibility. If you are connecting across the open Internet, then we recommend you use SSH. If the server you want to connect to doesn't support SSH, it might be worth trying to persuade the administrator to install it.
+</p>
+<p>
+如果你的客户端和服务器都在(良好的)防火墙外，则使用Telnet或者Rlogin看起来也很安全，不过我们仍然推荐你使用SSH。
+</p>
+
+<hr><p>If you want to provide feedback on this manual or on the PuTTY tools themselves, see the <a href="http://www.chiark.greenend.org.uk/~sgtatham/putty/feedback.html">Feedback page</a>.</p><address>
+[PuTTY 版本 0.65]</address></body>
+</html>
